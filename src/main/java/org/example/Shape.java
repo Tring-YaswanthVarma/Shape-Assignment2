@@ -8,7 +8,7 @@ import static org.example.Shape.RECTANGLE;
 public class Shape {
     static final String CIRCLE = "CIRCLE";
     static final String RECTANGLE = "RECTANGLE";
-    private static final double pi = 3.14;
+    private static final double PI = 3.14;
     private final String type;
     private double triangleL1;
     private double triangleL2;
@@ -42,7 +42,7 @@ public class Shape {
 
     public double perimeter() {
         if (type.equals(CIRCLE)) {
-            return (radius * 2 * pi);
+            return (radius * 2 * PI);
         } else if (type.equals(RECTANGLE)) {
             return (2 * (rectLength + rectWidth));
         } else {
@@ -52,7 +52,7 @@ public class Shape {
 
     public double area() {
         if (type.equals(CIRCLE)) {
-            return (pi * radius * radius);
+            return (PI * radius * radius);
         } else if (type.equals(RECTANGLE)) {
             return (rectLength * rectWidth);
         } else {

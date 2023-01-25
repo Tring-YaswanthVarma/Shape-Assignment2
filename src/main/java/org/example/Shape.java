@@ -3,8 +3,10 @@ package org.example;
 import java.util.*;
 
 public class Shape {
-    private double pi = 3.14;
-    private String type;
+    private static final String circle = "Circle";
+    private static final String rectangle = "Rectangle";
+    private static final double pi = 3.14;
+    private final String type;
     private double triangleL1;
     private double triangleL2;
     private double triangleL3;
@@ -36,9 +38,9 @@ public class Shape {
     }
 
     public double perimeter() {
-        if (type.equals("Circle")) {
+        if (type.equals(circle)) {
             return (radius * 2 * pi);
-        } else if (type.equals("Rectangle")) {
+        } else if (type.equals(rectangle)) {
             return (2 * (rectLength + rectWidth));
         } else {
             return triangleL1 + triangleL2 + triangleL3;
@@ -46,9 +48,9 @@ public class Shape {
     }
 
     public double area() {
-        if (type.equals("Circle")) {
+        if (type.equals(circle)) {
             return (pi * radius * radius);
-        } else if (type.equals("Rectangle")) {
+        } else if (type.equals(rectangle)) {
             return (rectLength * rectWidth);
         } else {
             return (triangleBase * triangleHeight) / 2;
@@ -59,8 +61,6 @@ public class Shape {
 class Main {
     public static void main(String[] args) {
         String type;
-        // boolean flag = true;
-        // int choice;
         double triangleL1, triangleL2, triangleL3, triangleHeight, triangleBase;
         double rectLength, rectWidth;
         double radius;
@@ -68,7 +68,6 @@ class Main {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter Shape type : ");
         type = sc.next();
-        System.out.println(type);
         if (type.equals("Circle")) {
             System.out.println("Enter radius of the circle : ");
             radius = sc.nextDouble();

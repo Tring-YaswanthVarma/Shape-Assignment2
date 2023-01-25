@@ -2,8 +2,10 @@ package org.example;
 
 import java.util.*;
 
+import static org.example.Shape.circle;
+
 public class Shape {
-    private static final String circle = "Circle";
+    static final String circle = "Circle";
     private static final String rectangle = "Rectangle";
     private static final double pi = 3.14;
     private final String type;
@@ -58,7 +60,8 @@ public class Shape {
     }
 }
 
-class Main {
+class Main{
+
     public static void main(String[] args) {
         String type;
         double triangleL1, triangleL2, triangleL3, triangleHeight, triangleBase;
@@ -68,7 +71,7 @@ class Main {
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter Shape type : ");
         type = sc.next();
-        if (type.equals("Circle")) {
+        if (type.equals(circle)) {
             System.out.println("Enter radius of the circle : ");
             radius = sc.nextDouble();
 

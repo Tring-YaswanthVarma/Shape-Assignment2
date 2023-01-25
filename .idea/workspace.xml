@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="2012fec1-9b30-42fe-8aaa-9e29af10b36e" name="Changes" comment="added constants">
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Shape.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/Shape.java" afterDir="false" />
-    </list>
+    <list default="true" id="2012fec1-9b30-42fe-8aaa-9e29af10b36e" name="Changes" comment="circle constant" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,12 +60,27 @@
       <option name="project" value="LOCAL" />
       <updated>1674670028213</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="circle constant">
+      <created>1674670266004</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1674670266004</updated>
+    </task>
+    <task id="LOCAL-00004" summary="circle constant">
+      <created>1674670431487</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1674670431487</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
     <MESSAGE value="added constants" />
-    <option name="LAST_COMMIT_MESSAGE" value="added constants" />
+    <MESSAGE value="circle constant" />
+    <option name="LAST_COMMIT_MESSAGE" value="circle constant" />
   </component>
 </project>

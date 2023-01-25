@@ -2,12 +2,12 @@ package org.example;
 
 import java.util.*;
 
-import static org.example.Shape.circle;
-import static org.example.Shape.rectangle;
+import static org.example.Shape.Circle;
+import static org.example.Shape.Rectangle;
 
 public class Shape {
-    static final String circle = "Circle";
-    static final String rectangle = "Rectangle";
+    static final String Circle = "Circle";
+    static final String Rectangle = "Rectangle";
     private static final double pi = 3.14;
     private final String type;
     private double triangleL1;
@@ -41,9 +41,9 @@ public class Shape {
     }
 
     public double perimeter() {
-        if (type.equals(circle)) {
+        if (type.equals(Circle)) {
             return (radius * 2 * pi);
-        } else if (type.equals(rectangle)) {
+        } else if (type.equals(Rectangle)) {
             return (2 * (rectLength + rectWidth));
         } else {
             return triangleL1 + triangleL2 + triangleL3;
@@ -51,9 +51,9 @@ public class Shape {
     }
 
     public double area() {
-        if (type.equals(circle)) {
+        if (type.equals(Circle)) {
             return (pi * radius * radius);
-        } else if (type.equals(rectangle)) {
+        } else if (type.equals(Rectangle)) {
             return (rectLength * rectWidth);
         } else {
             return (triangleBase * triangleHeight) / 2;
@@ -65,22 +65,27 @@ class Main{
 
     public static void main(String[] args) {
         String type;
-        double triangleL1, triangleL2, triangleL3, triangleHeight, triangleBase;
-        double rectLength, rectWidth;
+        double triangleL1;
+        double triangleL2;
+        double triangleL3;
+        double triangleHeight;
+        double triangleBase;
+        double rectLength;
+        double rectWidth;
         double radius;
         Shape s;
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter Shape type : ");
         type = sc.next();
-        if (type.equals(circle)) {
-            System.out.println("Enter radius of the circle : ");
+        if (type.equals(Circle)) {
+            System.out.println("Enter radius of the Circle : ");
             radius = sc.nextDouble();
 
             s = new Shape(type, radius);
-        } else if (type.equals(rectangle)) {
-            System.out.println("Enter length of the rectangle : ");
+        } else if (type.equals(Rectangle)) {
+            System.out.println("Enter length of the Rectangle : ");
             rectLength = sc.nextDouble();
-            System.out.println("Enter width of the rectangle : ");
+            System.out.println("Enter width of the Rectangle : ");
             rectWidth = sc.nextDouble();
 
             s = new Shape(type, rectLength, rectWidth);
@@ -99,21 +104,6 @@ class Main{
             s = new Shape(type, triangleL1, triangleL2, triangleL3, triangleHeight,
                     triangleBase);
         }
-        // while (flag) {
-        // System.out.println("1. Perimeter" + "\n2. Area" + "\n3. Exit" + "\nEnter your
-        // choice : ");
-        // choice = sc.nextInt();
-        // switch (choice) {
-        // case 1:
-        // System.out.println("Perimeter for the Shape : " + s.perimeter());
-        // break;
-        // case 2:
-        // System.out.println("Area of the shape : " + s.area());
-        // break;
-        // default:
-        // flag = false;
-        // break;
-        // }
         System.out.println("Perimeter for the Shape : " + s.perimeter());
         System.out.println("Area of the shape : " + s.area());
         sc.close();

@@ -2,12 +2,12 @@ package org.example;
 
 import java.util.*;
 
-import static org.example.Shape.Circle;
-import static org.example.Shape.Rectangle;
+import static org.example.Shape.CIRCLE;
+import static org.example.Shape.RECTANGLE;
 
 public class Shape {
-    static final String Circle = "Circle";
-    static final String Rectangle = "Rectangle";
+    static final String CIRCLE = "CIRCLE";
+    static final String RECTANGLE = "RECTANGLE";
     private static final double pi = 3.14;
     private final String type;
     private double triangleL1;
@@ -41,9 +41,9 @@ public class Shape {
     }
 
     public double perimeter() {
-        if (type.equals(Circle)) {
+        if (type.equals(CIRCLE)) {
             return (radius * 2 * pi);
-        } else if (type.equals(Rectangle)) {
+        } else if (type.equals(RECTANGLE)) {
             return (2 * (rectLength + rectWidth));
         } else {
             return triangleL1 + triangleL2 + triangleL3;
@@ -51,9 +51,9 @@ public class Shape {
     }
 
     public double area() {
-        if (type.equals(Circle)) {
+        if (type.equals(CIRCLE)) {
             return (pi * radius * radius);
-        } else if (type.equals(Rectangle)) {
+        } else if (type.equals(RECTANGLE)) {
             return (rectLength * rectWidth);
         } else {
             return (triangleBase * triangleHeight) / 2;
@@ -77,15 +77,15 @@ class Main{
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter Shape type : ");
         type = sc.next();
-        if (type.equals(Circle)) {
-            System.out.println("Enter radius of the Circle : ");
+        if (type.equals(CIRCLE)) {
+            System.out.println("Enter radius of the CIRCLE : ");
             radius = sc.nextDouble();
 
             s = new Shape(type, radius);
-        } else if (type.equals(Rectangle)) {
-            System.out.println("Enter length of the Rectangle : ");
+        } else if (type.equals(RECTANGLE)) {
+            System.out.println("Enter length of the RECTANGLE : ");
             rectLength = sc.nextDouble();
-            System.out.println("Enter width of the Rectangle : ");
+            System.out.println("Enter width of the RECTANGLE : ");
             rectWidth = sc.nextDouble();
 
             s = new Shape(type, rectLength, rectWidth);

@@ -3,10 +3,11 @@ package org.example;
 import java.util.*;
 
 import static org.example.Shape.circle;
+import static org.example.Shape.rectangle;
 
 public class Shape {
     static final String circle = "Circle";
-    private static final String rectangle = "Rectangle";
+    static final String rectangle = "Rectangle";
     private static final double pi = 3.14;
     private final String type;
     private double triangleL1;
@@ -76,7 +77,7 @@ class Main{
             radius = sc.nextDouble();
 
             s = new Shape(type, radius);
-        } else if (type.equals("Rectangle")) {
+        } else if (type.equals(rectangle)) {
             System.out.println("Enter length of the rectangle : ");
             rectLength = sc.nextDouble();
             System.out.println("Enter width of the rectangle : ");

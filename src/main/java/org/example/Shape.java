@@ -1,13 +1,14 @@
 package org.example;
 
 import java.util.*;
+import java.util.logging.Logger;
 
 import static org.example.Shape.CIRCLE;
 import static org.example.Shape.RECTANGLE;
 
 public class Shape {
-    static final String CIRCLE = "CIRCLE";
-    static final String RECTANGLE = "RECTANGLE";
+    static final String CIRCLE = "circle";
+    static final String RECTANGLE = "rectangle";
     private static final double PI = 3.14;
     private final String type;
     private double triangleL1;
@@ -64,6 +65,8 @@ public class Shape {
 class Main{
 
     public static void main(String[] args) {
+        Logger logger = Logger.getLogger("com.api.jar");
+        String check;
         String type;
         double triangleL1;
         double triangleL2;
@@ -75,37 +78,39 @@ class Main{
         double radius;
         Shape s;
         Scanner sc = new Scanner(System.in);
-        System.out.println("Enter Shape type : ");
+        logger.info("Enter Shape type : ");
         type = sc.next();
         if (type.equals(CIRCLE)) {
-            System.out.println("Enter radius of the CIRCLE : ");
+            logger.info("Enter radius of the CIRCLE : ");
             radius = sc.nextDouble();
 
             s = new Shape(type, radius);
         } else if (type.equals(RECTANGLE)) {
-            System.out.println("Enter length of the RECTANGLE : ");
+            logger.info("Enter length of the RECTANGLE : ");
             rectLength = sc.nextDouble();
-            System.out.println("Enter width of the RECTANGLE : ");
+            logger.info("Enter width of the RECTANGLE : ");
             rectWidth = sc.nextDouble();
 
             s = new Shape(type, rectLength, rectWidth);
         } else {
-            System.out.println("Enter 1st side of the triangle : ");
+            logger.info("Enter 1st side of the triangle : ");
             triangleL1 = sc.nextDouble();
-            System.out.println("Enter 2nd side of the triangle : ");
+            logger.info("Enter 2nd side of the triangle : ");
             triangleL2 = sc.nextDouble();
-            System.out.println("Enter 3rd side of the triangle : ");
+            logger.info("Enter 3rd side of the triangle : ");
             triangleL3 = sc.nextDouble();
-            System.out.println("Enter height of the triangle : ");
+            logger.info("Enter height of the triangle : ");
             triangleHeight = sc.nextDouble();
-            System.out.println("Enter base of the triangle : ");
+            logger.info("Enter base of the triangle : ");
             triangleBase = sc.nextDouble();
 
             s = new Shape(type, triangleL1, triangleL2, triangleL3, triangleHeight,
                     triangleBase);
         }
-        System.out.println("Perimeter for the Shape : " + s.perimeter());
-        System.out.println("Area of the shape : " + s.area());
+        check = "Perimeter for the Shape : " + s.perimeter();
+        logger.info(check);
+        check = "Area of the shape : " + s.area();
+        logger.info(check);
         sc.close();
 
     }
